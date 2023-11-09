@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch ~ case문 예제</title>
+    <style>
+        .medal {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #f33;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+    <script>
+        // 순위에 따른 메달 출력
+        let rank = 1;
+        switch(rank){
+            case 1:
+                document.write("금메달입니다<br>"); break;
+            case 2:
+                document.write("은메달입니다<br>"); break;
+            case 3:
+                document.write("동메달입니다<br>"); break;
+            default :
+                document.write("메달을 획득하지 못하였습니다"); break;
+        }
+        let medal = "메달"
+        if(rank <= 3){
+            if(rank === 1){
+                medal = "금메달"
+            }
+            if(rank === 2){
+                medal = "은메달"
+            }
+            if(rank === 3){
+                medal = "동메달"
+            }
+            document.write("<span class='medal'>" + medal + "</span>입니다");
+        }else {
+            document.write("메달을 획득하지 못하였습니다");
+        }
+    </script>
+</html>
