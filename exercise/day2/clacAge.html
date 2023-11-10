@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산 프로그램</title>
+    <style>
+        body {
+            line-height: 30px;
+        }
+        span {
+            font-weight: bold;
+            background: #eee;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        .age{
+            color: #f99;
+        }
+        .birth {
+            color: #99f;
+        }
+        .current {
+            color: #9f9;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+    <script>
+        // 조건 : 현재연도 = 상수로 선언
+        // 나이 = 현재연도 - 태어난해
+        const currentYear = 2023;
+        let age = 0;
+        let birthYear = prompt("태어난 연도를 입력하세요(YYYY)", "1999");
+        // 예외처리
+        if(birthYear == null) {
+            document.write("입력이 취소되었습니다");
+        }else if(isNaN(birthYear)){
+            document.write("숫자를 입력해주세요");
+        }else {
+            age = currentYear - birthYear;
+            document.write("<span class='current'>" + currentYear + "</span>년 현재<br>" +"<span class='birth'>" + birthYear + "</span>년에 태어난 사람의 나이는 <span class='age'>" + age + "</span>세 입니다");
+        }
+
+    </script>
+</html>
