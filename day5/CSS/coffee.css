@@ -49,3 +49,8 @@ hr{
     padding-left: 40px;
     color: #00f;
 }
+
+/* detail 영역 */
+#detail {
+    display: none;
+}
