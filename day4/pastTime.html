@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 계산 프로그램</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        body {
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            border: 1px solid #ddc;
+            text-align: center;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: #ffe;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 150px;
+            color: #f96;
+            text-shadow: 2px 2px #ddd;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        #day {
+            font-size: 2rem;
+            color: #f99;
+            font-weight: bold;
+            text-shadow: 2px 2px #ddd;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>지금까지 며칠?</h2>
+        <p>개강 이후 <span id="day"></span>일 지났습니다</p>
+    </div>  
+</body>
+    <script>
+        let toDay = new Date();   // 현재 일
+        let firstDay = new Date("2023-09-05");
+
+        // 지나온 시간 계산 = 현재일 - 시작일
+        let passedTime = toDay.getTime() - firstDay.getTime();
+        console.log(passedTime + "ms");
+
+        // 일로 환산
+        passedTime = Math.floor(passedTime / (24 * 60 * 60 * 1000));
+        console.log(passedTime +"일");
+
+        document.getElementById("day").innerHTML = passedTime;
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼에서 함수 호출하기</title>
+    <style>
+        #wrap {
+            width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <button onclick="myAbs(-10)">계산하기</button>
+        <hr>
+        <p id="print"></p>
+    </div>
+</body>
+    <script>
+        function myAbs(x){
+            if(x < 0){
+                // document.getElementById("print").innerHTML = -x;
+                let p = document.getElementById("print");
+                p.innerHTML = -x
+            }
+            document.getElementById("print").innerHTML = x;
+        }
+    </script>
+</html>

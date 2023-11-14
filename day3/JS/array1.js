@@ -22,5 +22,11 @@ delete animal[1];  // delete = 값은 삭제, 공간은 남아있다
 // 0번 인덱스부터 시작하고, 배열의 길이 미만일 것
 for(var i = 0; i < animal.length; i++){
     document.write(animal[i] + " ");
-}
+} // 삭제된 값의 공간도 출력 대상o
 
+document.write("<br>")
+
+// for in 문 (향상 for문)
+for(let i in animal){
+    document.write(animal[i] + " ");
+}  // 삭제된 값의 공간 X

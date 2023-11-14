@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산 프로그램</title>
+    <style>
+        body {
+            line-height: 30px;
+            text-align: center;
+        }
+        h2 {
+            margin: 20px auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            background: #ff9;
+            border-radius: 10px;
+            box-shadow: 0 5px #ccc;
+        }
+        button:hover {
+            background: #f99;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px #333;
+        }
+        span {
+            font-weight: bold;
+            background: #eee;
+            border-radius: 10px;
+            padding: 3px;
+        }
+        .age{
+            color: #f99;
+        }
+        .birth {
+            color: #99f;
+        }
+        .current {
+            color: #6f6;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h2>나이를 계산하는 프로그램</h2>
+        <button onclick="calcAge()">계산하기</button>
+        <hr>
+        <p id="print"></p>
+    </div>
+</body>
+    <script src="JS/calc_age.js"></script>
+</html>

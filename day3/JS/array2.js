@@ -16,6 +16,10 @@ for(var i = 0; i < num.length; i++){
     console.log(num[i]);
 }
 
+for(let n in num){
+    document.write(num[n] + " ");
+}
+
 // 연산
 console.log(num[1] - num[2]);
 console.log(num[1] <= num[2]);

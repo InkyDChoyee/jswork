@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 바꾸기</title>
+    <style>
+        div {
+            margin-left: 50px;
+        }
+        .menu {
+            width: 500px;
+            height: 80px;
+        }
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            margin: 10px 18px;
+            padding: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        ul li a{
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+        }
+        .red {
+            background: #f99;
+        }
+        .green {
+            background: #9f9;
+        }
+        .blue {
+            background: #99f;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li><a class="red" href="#" onclick="changeBg('#f99')">Red</a></li>
+            <li><a class="green" href="#" onclick="changeBg('#9f9')">Green</a></li>
+            <li><a class="blue" href="#" onclick="changeBg('#99f')">Blue</a></li>
+        </ul>
+    </div>
+    <div class="box" id="rect"></div>
+</body>
+    <script>
+        // style 속성 사용
+        function changeBg(color) {
+            let rect = document.getElementById("rect")
+            rect.style.backgroundColor = color;
+        }
+    </script>
+</html>
