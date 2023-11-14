@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체의 함수</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        let arr = [1, 2, 3];
+        // 맨 뒤에 추가, 맨 뒤에 제거
+        arr.push(4);  // setter 개념
+        console.log(arr);
+
+        arr.pop();
+        console.log(arr);
+
+        // 맨 앞에 추가, 맨 앞 삭제
+        arr.unshift(0);  // setter 개념
+        console.log(arr);
+
+        arr.shift();  // getter 개념
+        console.log(arr);  // getter 개념
+
+
+        // 특정 위치에 추가, 삭제 = splice()
+        let animal = ['bear', 'chicken', 'pig', 'horse'];
+        console.log(animal);
+
+        // 삭제 splice(시작점, 갯수)
+        animal.splice(1,1);  // 1번 인덱스 위치에서부터 1개 삭제
+        console.log(animal);
+
+        // 추가 splice(넣고싶은 인덱스, 0, 넣을 값)
+        animal.splice(2, 0, 'cow'); // 2번 인덱스 위치에서 0개 삭제, cow 추가
+        console.log(animal);
+    </script>
+</html>

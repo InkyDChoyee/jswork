@@ -1,0 +1,51 @@
+#container{width: 600px; margin: 20px auto;}
+
+#small-pic {
+    margin: 20px 8px;
+}
+
+#big-pic {
+    width: 200px;
+    height: 200px;
+}
+
+.small {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+}
+
+#prod-pic {
+    float: left;
+    margin: 20px 10px;
+}
+
+/* desc 스타일 */
+#desc {
+    width: 250px;
+    float: left;
+}
+
+hr{
+    clear: both;
+}
+
+#desc ul {
+    list-style: none;
+}
+
+#desc ul li {
+    line-height: 1.8;
+}
+
+#desc button{
+    width: 100%;
+    margin: 20px 5px;
+    padding: 10px;
+}
+
+#desc a {
+    text-decoration: none;
+    padding-left: 40px;
+    color: #00f;
+}

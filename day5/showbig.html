@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스로 선택한 사진 바꾸기</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        #content {
+            width: 350px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: #eee;
+        }
+        #smallPic {
+            margin: 20px 5px;
+        }
+        .small {
+            width: 100px;
+            height: 100px;
+            margin: 0 4px;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <h2>커피의 세계</h2>
+        <div id="pic">
+            <img src="images/coffee-blue.jpg" alt="커피잔" id="big">
+            <div id="smallPic">
+                <img src="images/coffee-blue.jpg" class="small" alt="커피잔" >
+                <img src="images/coffee-gray.jpg" class="small" alt="커피잔" >
+                <img src="images/coffee-pink.jpg" class="small" alt="커피잔" >
+            </div>
+        </div>
+    </section>
+</body>
+    <script>
+        let bigPic = document.querySelector("#big")
+        let samllPics = document.querySelectorAll(".small");
+        // samllPics[1].onclick = showBig;   // showBig() 함수 호출
+
+        // for(let i = 0; i < samllPics.length; i++){
+        //     samllPics[i].onclick = showBig;
+        // }
+
+        // function showBig() {
+        //     // 클릭한 대상 이미지 소스 경로
+        //     bigPic.setAttribute("src", this.src);  // this = 이벤트가 일어난 대상
+        // }
+
+        // 실행 함수 => 이름없는 함수로 간단하게 바꾸기
+        for(let i = 0; i < samllPics.length; i++){
+            samllPics[i].onclick = function(){
+                bigPic.setAttribute("src", this.src);
+            };
+        }
+
+    </script>
+</html>

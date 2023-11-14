@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector() 함수 사용</title>
+</head>
+<body>
+    <p>이름 <input type="text" class="name" value="이강" disabled></p>
+    <p>클릭하면 이름이 변경됩니다</p>
+    <button onclick="myFunc()">클릭</button>
+</body>
+    <script>
+        function myFunc() {
+            document.querySelector(".name").value ="강산";
+        }
+    </script>
+</html>

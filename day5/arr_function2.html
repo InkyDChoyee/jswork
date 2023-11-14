@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체의 함수</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // 배열 연결 함수 = concat(), join()
+        let numbers = [1, 2, 3];
+        let chars = ['a', 'b', 'c'];
+
+        // join() = 구분기호로 연결
+        document.write(numbers + "<br>");
+        document.write(numbers.join("-"));
+        document.write("<br><br>")
+        document.write(chars + "<br>");
+        document.write(chars.join(":"));
+
+        document.write("<br><br>")
+
+        // concat() = 둘 이상의 배열을 합침
+        let list = numbers.concat(chars);
+        document.write(list + "<br>");
+        document.write(list.join(":") + "<br>");
+
+        document.write("<br><br>")
+
+        // 문자열 위치 함수 = indexOf("문자열"), lastIndexOf("문자열")
+
+        // indexOf() => 문자열 존재 = 0 이상 반환 / 문자열 부존재 = -1 반환
+        // indexOf() = 앞에서부터 찾음
+        let str = "Hello world, welcome world";
+        let idx1 = str.indexOf("world");
+        let idx2 = str.indexOf("korea")
+        document.write(idx1 +"<br>");
+        document.write(idx2);
+
+        document.write("<br><br>")
+
+        // lastIndexOf() = 문자열의 뒤에서 찾아서 위치 반환
+        let idx3 = str.lastIndexOf("world");
+        document.write(idx3 +"<br>");
+
+    </script>
+</html>

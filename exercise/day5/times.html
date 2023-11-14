@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4의 배우일까 아닐까</title>
+    <style>
+        * {
+            width: 100%;
+            margin: 0 auto;
+        }
+        body {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 40px;
+        }
+        p {
+            margin-top: 40px;
+            font-size: 1.3rem;
+        }
+        span {
+            font-weight: bold;
+        }
+        .span1 {
+            color: #f99;
+        }
+        .span2 {
+            color: #9f9;
+        }
+        .span3 {
+            color: #99f;
+        }
+    </style>
+</head>
+<body>
+        <h1>4의 배수일까 아닐까</h1>
+</body>
+    <script>
+        let x = prompt("숫자를 입력하시오", "100");
+        if(x == null){
+            document.write("<p>입력이 취소되었습니다</p>");
+        }else{
+            if(isNaN(x)) {
+                document.write("<p>숫자를 입력해주세요</p>");
+            }else {
+                if(x % 4 == 0) {
+                    document.write("<p><span class='span1'>" + x + "</span>는(은) <span class='span2'>4의 배수</span><span class='span3'>입니다</span></p>");
+                }else if(x % 4 != 0) {
+                    document.write("<p><span class='span1'>" + x + "</span>는(은) <span class='span2'>4의 배수</span>가 <span class='span3'>아닙니다</span></p>");
+                }
+            }
+        }
+    </script>
+</html>
