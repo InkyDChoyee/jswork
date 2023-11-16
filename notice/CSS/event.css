@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+#container {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+button {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

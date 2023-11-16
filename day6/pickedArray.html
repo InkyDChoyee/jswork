@@ -28,8 +28,10 @@
     </section>
 </body>
     <script>
-        let member = 45; // 전체 응모자 수
-        let winner = new Array(6); // 당첨자 수
+        let member = prompt("전체 응모자수", "10"); // 전체 응모자 수
+        let win = prompt("당첨자 수", " 5")
+        win = parseInt(win);
+        let winner = new Array(win); // 당첨자 수 배열로 선언
 
         // 5명 추첨
         document.write("<p>전체 응모자 수: " + member + "명</p>");

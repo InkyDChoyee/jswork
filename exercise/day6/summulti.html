@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sumMulti()</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        // 사용자에게 입력받은 두 수의 값이 같으면 두 수를 곱
+        // 다르면 더하는 함수 만들기
+        // 함수 선언 = function sumMulti(x, y)
+        // if~else문 사용 비교
+        // 값 비교 -> === 사용
+        //console.log() 사용
+        // 5, 10 // 10, 10
+
+        let x = prompt();
+        let y = prompt();
+
+        if(x == null || y == null){
+            console.log("입력이 취소되었습니다")
+        }else if(isNaN(x) || isNaN(y)){
+            console.log("숫자를 입력하세요")
+        }else {
+            function sumMulti(x,y) {
+                x = parseInt(x);
+                y = parseInt(y);
+                if(x === y){
+                    return x*y;
+                }else{
+                    return x+y;
+                }
+            }
+            console.log(sumMulti(x,y));
+        }
+
+
+
+    </script>
+</html>
