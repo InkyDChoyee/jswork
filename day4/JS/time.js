@@ -7,6 +7,10 @@ function myWatch() {
     console.log(time);
 
     let watch = document.getElementById("show")
-    watch.innerHTML = time;
+    if(now.getHours() <= 12){
+        watch.innerHTML = time.
+    }else {
+        watch.innerHTML = time.
+    }
     watch.style.color = "#99f";
 }
