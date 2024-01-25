@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 날씨</title>
+</head>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+<body>
+    <h1>오늘의 날씨</h1>
+    <h3 class="result">
+        <!-- 20240125, 0600, -9.1 -->
+    </h3>
+
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=Czv3Me9Ivw6piA470yefflffDGzAsw9tObOp4T5OariNl8C3CGpaUt9JHcev%2BlOlh8%2FTj2fcYguzY86yh87F%2Fg%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=20240125&base_time=0600&nx=55&ny=127",
+            // data: ,
+            success: function(data){
+                console.log(data);
+                console.log(data.response.body.items.item[3].obsrValue);
+                let item = data.response.body.items.item[3];
+                let content = "날짜: " + item.baseDate + 
+                              ", 발표시각: " + item.baseTime +
+                              ", 기온: " + item.obsrValue;
+                $('.result').text(content);
+            },
+            error: function(error){
+                console.log(error);
+            }
+
+        });
+    </script>
+</body>
+</html>
